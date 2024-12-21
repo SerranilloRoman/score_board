@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>EQUIPOS</th>
+                        <th>MARCADOR</th>
+                        <th>FALTAS</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LOCAL</td>
+                        <td><h2 id="local-score">0</h2></td>
+                        <td><h2 id="local-foul">0</h2></td>
+                        <td>
+                            <input type="text" id="local-score-player" placeholder="Anotador">
+                            <button id="local-score-btn" onclick="increment(0, 0)">Gol</button>
+                            <input type="text" id="local-foul-player" placeholder="Amonestado">
+                            <button id="local-foul-btn" onclick="increment(0, 1)">Falta</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RETADOR</td>
+                        <td><h2 id="challenger-score">0</h2></td>
+                        <td><h2 id="challenger-foul">0</h2></td>
+                        <td>
+                            <input type="text" id="challenger-score-player" placeholder="Anotador">
+                            <button id="challenger-score-btn" onclick="increment(1, 0)">Gol</button>
+                            <input type="text" id="challenger-foul-player" placeholder="Amonestado">
+                            <button id="challenger-foul-btn" onclick="increment(1, 1)">Falta</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="team-chart">                
+                <h2>LOCAL</h2>
+                <input type="text" class="local-player" id="l-p-1" placeholder="Jugador 1" />
+                <input type="text" class="local-player" id="l-p-2" placeholder="Jugador 2" />
+                <input type="text" class="local-player" id="l-p-3" placeholder="Jugador 3" />
+                <input type="text" class="local-player" id="l-p-4" placeholder="Jugador 4" />
+                <input type="text" class="local-player" id="l-p-5" placeholder="Jugador 5" />
+                <input type="text" class="local-player" id="l-p-6" placeholder="Jugador 6" />
+                <input type="text" class="local-player" id="l-p-7" placeholder="Jugador 7" />
+                <input type="text" class="local-player" id="l-p-8" placeholder="Jugador 8" />
+            </div>
+            <div class="team-chart">                
+                <h2>RETADOR</h2>
+                <input type="text" class="challenger-player" id="c-p-1" placeholder="Jugador 1" />
+                <input type="text" class="challenger-player" id="c-p-2" placeholder="Jugador 2" />
+                <input type="text" class="challenger-player" id="c-p-3" placeholder="Jugador 3" />
+                <input type="text" class="challenger-player" id="c-p-4" placeholder="Jugador 4" />
+                <input type="text" class="challenger-player" id="c-p-5" placeholder="Jugador 5" />
+                <input type="text" class="challenger-player" id="c-p-6" placeholder="Jugador 6" />
+                <input type="text" class="challenger-player" id="c-p-7" placeholder="Jugador 7" />
+                <input type="text" class="challenger-player" id="c-p-8" placeholder="Jugador 8" />
+            </div>
+            <!-- Timer and Control Buttons (Moved to Bottom) -->
+            <div class="timer-controls">
+                <div>
+                    <h1 id="timer">10:00</h1>
+                </div>
+                <div>
+                    <button onclick="startTimer()">Comenzar/Reanudar</button>
+                    <button onclick="stopTimer()">Parar</button>
+                    <button onclick="restartTimer()">Nuevo Partido/Reiniciar</button>
+                    <button onclick="downloadData()">Descargar Datos</button>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
